@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Rise Clothes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg nav-menu">
+            <div class="container-fluid px-lg-4">
+                <a href="index.html" class="navbar-brand logo">RISE</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#riseNavbar" aria-controls="riseNavbar" aria-expanded="false" aria-label="Открыть меню навигации">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="riseNavbar">
+                    <ul class="navbar-nav ms-lg-auto gap-lg-4 py-3 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+                        <li class="nav-item"><a class="nav-link" href="lookbook.html">Лукбук</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sizing.html">Предзаказ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="page-intro">
+            <h1>Contact</h1>
+            <p>Вопросы по размеру, срокам или конкретной вещи — пишите напрямую или оставьте заявку ниже. Отвечаем в течение дня.</p>
+        </section>
+
+        <section class="contact-grid">
+
+            <div class="contact-info">
+                <h2>Как с нами связаться</h2>
+                <ul class="contact-list">
+                    <li>
+                        <span class="label">WhatsApp</span>
+                        <a class="value" href="https://wa.me/77771234567">+7 777 123 45 67</a>
+                    </li>
+                    <li>
+                        <span class="label">Telegram</span>
+                        <a class="value" href="https://t.me/riseclothes">@riseclothes</a>
+                    </li>
+                    <li>
+                        <span class="label">Email</span>
+                        <a class="value" href="mailto:hello@riseclothes.kz">hello@riseclothes.kz</a>
+                    </li>
+                    <li>
+                        <span class="label">Город</span>
+                        <span class="value">Астана, Казахстан</span>
+                    </li>
+                </ul>
+
+                <table class="hours-table">
+                    <tr><td>Пн–Пт</td><td>10:00–20:00</td></tr>
+                    <tr><td>Сб</td><td>11:00–18:00</td></tr>
+                    <tr><td>Вс</td><td>только онлайн-заявки</td></tr>
+                </table>
+
+                <div class="socials">
+                    <a href="#">Instagram</a>
+                    <a href="#">TikTok</a>
+                    <a href="#">Telegram-канал</a>
+                </div>
+            </div>
+
+            <form class="contact-form" action="#" method="post">
+                <h2>Оставить заявку</h2>
+                <p>Расскажите, что интересует — подберём размер и уточним срок предзаказа.</p>
+
+                <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Имя</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Как к вам обращаться" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                </div>
+
+                <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <label for="contact" class="form-label">Telegram или телефон</label>
+                        <div class="input-group">
+                            <span class="input-group-text">@</span>
+                            <input type="text" class="form-control" id="contact" name="contact" placeholder="username или +7 ...">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="category" class="form-label">Категория</label>
+                        <select class="form-select" id="category" name="category">
+                            <option value="glasses">Очки</option>
+                            <option value="jackets">Верхняя одежда</option>
+                            <option value="knitwear">Зипки, худи, лонгсливы</option>
+                            <option value="shirts">Футболки</option>
+                            <option value="pants">Штаны</option>
+                            <option value="shoes">Обуви</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">Сообщение</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Модель, размер, вопросы по срокам"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-dark w-100">Отправить заявку</button>
+            </form>
+
+        </section>
+
+            <div class="card-group card-group-custom">
+                <div class="card border-dark">
+                    <img src="images/whatsapp.jpg" class="card-img-top card-img-dark" alt="WhatsApp">>
+                    <div class="card-body d-flex flex-column p-3 p-lg-4">
+                        <h3 class="card-title h5">WhatsApp</h3>
+                        <p class="card-text flex-grow-1">Самый быстрый способ получить ответ — пишите в любое время.</p>
+                        <a href="https://wa.me/77771234567" class="btn btn-outline-dark mt-3 align-self-start">Написать</a>
+                    </div>
+                </div>
+                <div class="card border-dark">
+                    <img src="images/tg.jpg" class="card-img-top card-img-dark" alt="Telegram">
+                    <div class="card-body d-flex flex-column p-3 p-lg-4">
+                        <h3 class="card-title h5">Telegram</h3>
+                        <p class="card-text flex-grow-1">Следите за новыми поступлениями и пишите вопросы прямо в канале.</p>
+                        <a href="https://t.me/riseclothes" class="btn btn-outline-dark mt-3 align-self-start">Открыть</a>
+                    </div>
+                </div>
+                <div class="card border-dark">
+                    <img src="images/emailpng.png" class="card-img-top card-img-dark" alt="Email">
+                    <div class="card-body d-flex flex-column p-3 p-lg-4">
+                        <h3 class="card-title h5">Email</h3>
+                        <p class="card-text flex-grow-1">Для более подробных вопросов — напишите нам на почту.</p>
+                        <a href="mailto:hello@riseclothes.kz" class="btn btn-outline-dark mt-3 align-self-start">Написать письмо</a>
+                    </div>
+                </div>
+            </div>
+
+    </main>
+
+    <footer>
+        <p>Rise Clothes — учебный проект. Front-End Assignment #1, AstanaITUniversity.</p>
+        <p>Команда: Sanzhar Kadyrov, Akarys Serikkazy, Nurasyl Yergazy</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

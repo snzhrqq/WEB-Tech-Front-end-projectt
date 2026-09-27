@@ -1,0 +1,35 @@
+h1 { font-size: 2rem; }
+h2 { font-size: 1.25rem; }
+body { font-size: 0.92rem; }
+
+@media (min-width: 576px) and (max-width: 991px) {
+    h1 { font-size: 2.6rem; }
+    h2 { font-size: 1.4rem; }
+    body { font-size: 0.96rem; }
+}
+
+@media (min-width: 992px) {
+    h1 { font-size: 3.2rem; }
+    h2 { font-size: 1.5rem; }
+    body { font-size: 1rem; }
+}
+
+.mq-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.mq-card {
+    flex: 1 1 100%;
+    border: 2px solid var(--line);
+    padding: 1.5rem;
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+    .mq-card { flex: 1 1 calc(50% - 0.75rem); }
+}
+
+@media (min-width: 992px) {
+    .mq-card { flex: 1 1 calc(33.333% - 1rem); }
+}
