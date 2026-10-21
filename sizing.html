@@ -273,6 +273,31 @@
                     </div>
                 </div>
             </div>
+        <section class="subscribe">
+            <h2>Не нашли свой размер?</h2>
+            <p>Оставьте почту — напишем, когда модель снова появится в предзаказе.</p>
+            <button type="button" id="openPopup" class="btn btn-dark btn-lg">Подписаться</button>
+        </section>
+
+        <div class="popup-overlay" id="popup">
+            <div class="popup">
+                <button type="button" class="popup-close" id="closePopup" aria-label="Закрыть">&times;</button>
+                <h2>Подписка на новинки</h2>
+                <form id="subscribeForm">
+                    <div class="mb-3">
+                        <label for="subName" class="form-label">Имя</label>
+                        <input type="text" class="form-control" id="subName" placeholder="Как к вам обращаться" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="subEmail" placeholder="you@example.com" required>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100">Подписаться</button>
+                    <p class="popup-success" id="subSuccess"></p>
+                </form>
+            </div>
+        </div>
+
     </main>
 
     <footer>
@@ -280,5 +305,6 @@
         <p>Команда: Sanzhar Kadyrov, Akarys Serikkazy, Nurasyl Yergazy</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/popup.js"></script>
 </body>
 </html>

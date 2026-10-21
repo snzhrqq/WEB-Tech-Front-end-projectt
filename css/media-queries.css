@@ -33,3 +33,43 @@ body { font-size: 0.92rem; }
 @media (min-width: 992px) {
     .mq-card { flex: 1 1 calc(33.333% - 1rem); }
 }
+/* Mobile layout fixes: stack multi-column blocks and keep wide tables scrollable */
+@media (max-width: 767px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 1.25rem;
+    }
+
+    .category,
+    .compare,
+    .why-us,
+    .gallery,
+    .page-layout,
+    .size-section,
+    .measure-steps,
+    .declaration {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .product-table,
+    .compare table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .grid-layout {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+    }
+
+    .gl-sidebar {
+        border-right: none;
+        border-bottom: 2px solid var(--line);
+    }
+}

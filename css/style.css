@@ -1133,3 +1133,166 @@ footer p {
 .card-group-custom .card-img-dark {
     background-color: #000;
 }
+
+body {
+    transition: background-color 0.5s ease;
+}
+
+.navbar.nav-menu,
+footer {
+    background-color: transparent;
+}
+
+.live-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto 3rem;
+    padding: 1.5rem 2rem;
+    border: 2px solid var(--line);
+}
+
+.live-label {
+    display: block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-soft);
+    margin-bottom: 0.4rem;
+}
+
+.live-time {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 1.6rem;
+    color: var(--text);
+}
+
+.faq {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 3rem 4rem;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--line);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 0;
+    background: none;
+    border: none;
+    font-family: 'Archivo', sans-serif;
+    font-size: 1rem;
+    text-align: left;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.faq-icon {
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+.faq-answer p {
+    padding-bottom: 1.1rem;
+}
+
+.subscribe {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 3rem 4rem;
+    text-align: center;
+}
+
+.subscribe p {
+    margin-bottom: 1.5rem;
+}
+
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(10, 10, 10, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    padding: 2rem;
+    background-color: #FFFFFF;
+    border: 2px solid var(--line);
+}
+
+.popup-close {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.9rem;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.popup-success,
+.form-success {
+    margin-top: 1rem;
+    color: #1E7B34;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+}
+
+.register {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+}
+
+.register p {
+    margin-bottom: 1.5rem;
+}
+
+
+.popup .form-control,
+.register .form-control {
+    border-radius: 0;
+    border-color: var(--line);
+}
+
+.popup .form-label,
+.register .form-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-soft);
+}
