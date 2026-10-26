@@ -29,6 +29,7 @@
                         <li class="nav-item"><a class="nav-link" href="sizing.html">Предзаказ</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
                     </ul>
+                    <button type="button" id="themeToggle" class="theme-toggle">☾ Ночь</button>
                 </div>
             </div>
         </nav>
@@ -331,13 +332,44 @@
             </div>
         </section>
 
+        <!-- Assignment 5: Objects, Arrays, Loops, Higher-Order Functions, Switch, Sound, Animation -->
+        <section class="shop">
+            <h2>Быстрый подбор</h2>
+            <p class="shop-intro">Выберите категорию или ценовой диапазон и добавьте вещи в предзаказ.</p>
+            <div class="filter-bar">
+                <button type="button" class="filter-btn active" data-filter="all">Все</button>
+                <button type="button" class="filter-btn" data-filter="glasses">Очки</button>
+                <button type="button" class="filter-btn" data-filter="jackets">Куртки</button>
+                <button type="button" class="filter-btn" data-filter="knitwear">Худи и свитеры</button>
+                <button type="button" class="filter-btn" data-filter="tshirts">Футболки</button>
+                <button type="button" class="filter-btn" data-filter="pants">Штаны</button>
+                <button type="button" class="filter-btn" data-filter="shoes">Обувь</button>
+                <button type="button" class="filter-btn" data-filter="cheap">До 20 000 ₸</button>
+                <button type="button" class="filter-btn" data-filter="premium">От 50 000 ₸</button>
+            </div>
+            <div class="cart-panel">
+                <div>
+                    <span class="live-label">В предзаказе</span>
+                    <p class="cart-numbers"><span id="cartCount" class="cart-count">0</span> шт. · <span id="cartTotal">0 ₸</span></p>
+                    <p id="cartList" class="cart-list">Пока пусто</p>
+                </div>
+                <button type="button" id="cartClear" class="btn btn-outline-dark btn-sm">Очистить</button>
+            </div>
+            <p id="resultText" class="result-text"></p>
+            <div id="productGrid" class="product-grid"></div>
+        </section>
+
     </main>
 
     <footer>
-        <p>Rise Clothes — учебный проект. Front-End Assignment #1, AstanaITUniversity.</p>
+        <p>Rise Clothes — учебный проект. Front-End Assignment #5, AstanaITUniversity.</p>
         <p>Команда: Sanzhar Kadyrov, Akarys Serikkazy, Nurasyl Yergazy</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/sound.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/keyboard-nav.js"></script>
     <script src="js/accordion.js"></script>
+    <script src="js/products.js"></script>
 </body>
 </html>

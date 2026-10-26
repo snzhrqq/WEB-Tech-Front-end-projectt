@@ -30,6 +30,7 @@
                         <li class="nav-item"><a class="nav-link" href="sizing.html">Предзаказ</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
                     </ul>
+                    <button type="button" id="themeToggle" class="theme-toggle">☾ Ночь</button>
                 </div>
             </div>
         </nav>
@@ -273,6 +274,75 @@
                     </div>
                 </div>
             </div>
+        <!-- Assignment 5: Callbacks — многошаговая форма предзаказа -->
+        <section class="preorder">
+            <h2>Оформить предзаказ</h2>
+            <p id="stepIndicator" class="step-indicator">Шаг 1 из 3</p>
+            <div class="step-progress"><div id="stepBar" class="step-bar"></div></div>
+            <form id="preorderForm" novalidate>
+                <div class="form-step">
+                    <div class="mb-3">
+                        <label for="orderCategory" class="form-label">Категория</label>
+                        <select id="orderCategory" class="form-select">
+                            <option value="">Выберите категорию</option>
+                            <option value="Очки">Очки</option>
+                            <option value="Куртки">Куртки</option>
+                            <option value="Худи и свитеры">Худи и свитеры</option>
+                            <option value="Футболки">Футболки</option>
+                            <option value="Штаны">Штаны</option>
+                            <option value="Обувь">Обувь</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="orderModel" class="form-label">Модель</label>
+                        <input type="text" id="orderModel" class="form-control" placeholder="Например, Saint Laurent Leather Jacket">
+                    </div>
+                    <div class="mb-3">
+                        <label for="orderSize" class="form-label">Размер</label>
+                        <select id="orderSize" class="form-select">
+                            <option value="">Выберите размер</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="Один размер">Один размер</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-step">
+                    <div class="mb-3">
+                        <label for="orderName" class="form-label">Имя</label>
+                        <input type="text" id="orderName" class="form-control" placeholder="Как к вам обращаться">
+                    </div>
+                    <div class="mb-3">
+                        <label for="orderPhone" class="form-label">Телефон</label>
+                        <input type="tel" id="orderPhone" class="form-control" placeholder="+7 777 123 45 67">
+                    </div>
+                    <div class="mb-3">
+                        <label for="orderCity" class="form-label">Город</label>
+                        <select id="orderCity" class="form-select">
+                            <option value="">Выберите город</option>
+                            <option value="Астана">Астана</option>
+                            <option value="Алматы">Алматы</option>
+                            <option value="Шымкент">Шымкент</option>
+                            <option value="Другой город">Другой город</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-step">
+                    <h3>Проверьте заказ</h3>
+                    <ul id="orderSummary" class="order-summary"></ul>
+                </div>
+                <p id="stepError" class="step-error"></p>
+                <div class="step-buttons">
+                    <button type="button" id="backBtn" class="btn btn-outline-dark">Назад</button>
+                    <button type="button" id="nextBtn" class="btn btn-dark">Далее</button>
+                    <button type="submit" id="submitOrder" class="btn btn-dark">Отправить</button>
+                </div>
+                <p id="orderSuccess" class="form-success"></p>
+            </form>
+        </section>
+
         <section class="subscribe">
             <h2>Не нашли свой размер?</h2>
             <p>Оставьте почту — напишем, когда модель снова появится в предзаказе.</p>
@@ -301,10 +371,14 @@
     </main>
 
     <footer>
-        <p>Rise Clothes — учебный проект. Front-End Assignment #1, AstanaITUniversity.</p>
+        <p>Rise Clothes — учебный проект. Front-End Assignment #5, AstanaITUniversity.</p>
         <p>Команда: Sanzhar Kadyrov, Akarys Serikkazy, Nurasyl Yergazy</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/sound.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/keyboard-nav.js"></script>
     <script src="js/popup.js"></script>
+    <script src="js/steps.js"></script>
 </body>
 </html>

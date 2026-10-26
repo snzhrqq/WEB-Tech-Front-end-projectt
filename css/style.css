@@ -1296,3 +1296,370 @@ footer {
     font-size: 0.75rem;
     color: var(--text-soft);
 }
+
+/* ================= Assignment 5 ================= */
+
+/* --- День / Ночь --- */
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.night {
+    --bg: #111111;
+    --surface: #1C1C1B;
+    --text: #F2F2F0;
+    --text-soft: #A9A9A4;
+    --line: #F2F2F0;
+    background-color: var(--bg) !important;
+}
+
+body.night .btn-dark {
+    --bs-btn-bg: #F2F2F0;
+    --bs-btn-color: #0A0A0A;
+    --bs-btn-border-color: #F2F2F0;
+    --bs-btn-hover-bg: #D9D9D6;
+    --bs-btn-hover-color: #0A0A0A;
+    --bs-btn-hover-border-color: #D9D9D6;
+    --bs-btn-active-bg: #D9D9D6;
+    --bs-btn-active-color: #0A0A0A;
+}
+
+body.night .btn-outline-dark {
+    --bs-btn-color: #F2F2F0;
+    --bs-btn-border-color: #F2F2F0;
+    --bs-btn-hover-bg: #F2F2F0;
+    --bs-btn-hover-color: #0A0A0A;
+    --bs-btn-active-bg: #F2F2F0;
+    --bs-btn-active-color: #0A0A0A;
+}
+
+body.night .card.border-dark {
+    border-color: var(--line) !important;
+}
+
+body.night .popup,
+body.night .masonry-item .caption {
+    background-color: var(--surface);
+}
+
+.theme-toggle {
+    margin-left: 1.5rem;
+    padding: 0.35rem 0.8rem;
+    border: 1px solid var(--line);
+    background: none;
+    color: var(--text);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: var(--text);
+    color: var(--bg);
+}
+
+@media (max-width: 991px) {
+    .theme-toggle {
+        margin: 0 0 1rem;
+    }
+}
+
+/* --- Навигация с клавиатуры --- */
+.navbar-nav .nav-link:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 4px;
+    color: var(--text);
+}
+
+/* --- Быстрый подбор (catalog) --- */
+.shop {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 3rem 4rem;
+}
+
+.shop-intro {
+    margin-bottom: 1.2rem;
+}
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--line);
+    background: none;
+    color: var(--text);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--text);
+    color: var(--bg);
+}
+
+.cart-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--line);
+}
+
+.cart-numbers {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 1.3rem;
+    color: var(--text);
+    margin: 0;
+}
+
+.cart-count {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.cart-list {
+    margin: 0.3rem 0 0;
+    font-size: 0.85rem;
+}
+
+.result-text {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    margin-bottom: 1rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.2rem;
+}
+
+.shop-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+    border: 1px solid var(--line);
+    animation: card-appear 0.4s ease;
+}
+
+.shop-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 0.6rem;
+}
+
+.shop-card h3 {
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.shop-price {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--text);
+    margin: 0.3rem 0 0.6rem;
+}
+
+.shop-card.added {
+    animation: card-pop 0.5s ease;
+}
+
+@keyframes card-appear {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes card-pop {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.06); box-shadow: 0 10px 24px rgba(10, 10, 10, 0.25); }
+    100% { transform: scale(1); }
+}
+
+/* --- Галерея с миниатюрами (lookbook) --- */
+.viewer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 3rem 2rem;
+}
+
+.viewer-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background-color: #FFFFFF;
+    border: 2px solid var(--line);
+    transition: opacity 0.25s ease;
+}
+
+.viewer-image.fade {
+    opacity: 0;
+}
+
+.viewer-caption {
+    margin: 0.6rem 0 1rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--text);
+}
+
+.thumbs {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.6rem;
+}
+
+.thumb {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.55;
+    border: 2px solid transparent;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.thumb:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+.thumb.active {
+    opacity: 1;
+    border-color: var(--line);
+}
+
+/* --- Звёзды рейтинга (lookbook) --- */
+.rating {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 3rem 4rem;
+    text-align: center;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.star {
+    background: none;
+    border: none;
+    font-size: 2.4rem;
+    line-height: 1;
+    color: #C9C9C4;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.star:hover {
+    transform: scale(1.2);
+}
+
+.star.selected {
+    color: #E0A800;
+}
+
+.rating-text {
+    margin-top: 0.8rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+}
+
+/* --- Многошаговая форма (sizing) --- */
+.preorder {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+}
+
+.step-indicator {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    margin-bottom: 0.5rem;
+}
+
+.step-progress {
+    height: 4px;
+    margin-bottom: 1.5rem;
+    background-color: var(--surface);
+}
+
+.step-bar {
+    width: 0;
+    height: 100%;
+    background-color: var(--text);
+    transition: width 0.4s ease;
+}
+
+.preorder .form-control,
+.preorder .form-select {
+    border-radius: 0;
+    border-color: var(--line);
+}
+
+.preorder .form-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-soft);
+}
+
+.form-step {
+    animation: card-appear 0.35s ease;
+}
+
+.order-summary {
+    padding-left: 0;
+}
+
+.order-summary li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--text);
+}
+
+.step-error {
+    color: #C0392B;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    min-height: 1rem;
+}
+
+.step-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.step-buttons .btn {
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+    .shop,
+    .viewer,
+    .rating {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .cart-panel {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .thumbs {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
